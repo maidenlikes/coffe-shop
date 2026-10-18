@@ -68,6 +68,17 @@ def rowdict(row):
     return dict(row) if row else None
 
 
+def admin_credentials():
+    """Use public demo credentials only when no admin account is configured."""
+    user = os.environ.get("ALGOKOPI_ADMIN_USER", "")
+    password = os.environ.get("ALGOKOPI_ADMIN_PASSWORD", "")
+    if user and password:
+        return user, password
+    if not REAL and not user and not password:
+        return "admin", "demoadmin"
+    return "", ""
+
+
 def init_db():
     with db() as con:
         con.executescript("""
@@ -525,7 +536,7 @@ class Handler(BaseHTTPRequestHandler):
             supplied_user = str(body.get("username", ""))
             supplied_password = str(body.get("password", ""))
             accounts = [
-                (os.environ.get("ALGOKOPI_ADMIN_USER", ""), os.environ.get("ALGOKOPI_ADMIN_PASSWORD", ""), "admin"),
+                (*admin_credentials(), "admin"),
                 (os.environ.get("ALGOKOPI_STAFF_USER", ""), os.environ.get("ALGOKOPI_STAFF_PASSWORD", ""), "staff"),
             ]
             match = next(((user, role) for user, password, role in accounts

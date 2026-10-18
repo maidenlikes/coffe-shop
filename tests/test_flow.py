@@ -60,6 +60,25 @@ class FlowTests(unittest.TestCase):
         self.assertEqual(self.request("/api/orders/" + first[1]["token"])[0], 200)
         self.assertEqual(self.request("/api/orders/wrong-token")[0], 404)
 
+    def test_demo_admin_credentials_only_without_configured_admin(self):
+        original_user = os.environ.pop("ALGOKOPI_ADMIN_USER", None)
+        original_password = os.environ.pop("ALGOKOPI_ADMIN_PASSWORD", None)
+        original_real = server.REAL
+        try:
+            status, account, _ = self.request("/api/admin/login", "POST",
+                                              {"username": "admin", "password": "demoadmin"})
+            self.assertEqual((status, account["role"]), (200, "admin"))
+            server.REAL = True
+            status, _, _ = self.request("/api/admin/login", "POST",
+                                         {"username": "admin", "password": "demoadmin"})
+            self.assertEqual(status, 401)
+        finally:
+            server.REAL = original_real
+            if original_user is not None:
+                os.environ["ALGOKOPI_ADMIN_USER"] = original_user
+            if original_password is not None:
+                os.environ["ALGOKOPI_ADMIN_PASSWORD"] = original_password
+
     def test_required_variant_and_price_change(self):
         base = {"table_id": 1, "method": "cashier", "expected_total": 34000,
                 "items": [{"product_id": 4, "quantity": 1, "option_ids": []}]}

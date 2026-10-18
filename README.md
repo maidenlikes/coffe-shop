@@ -5,11 +5,13 @@ Website dine-in AlgoKopi. Backend memakai Python 3.10+ dan SQLite bawaan; fronte
 ## Jalankan
 
 ```bash
-ALGOKOPI_ADMIN_USER=admin ALGOKOPI_ADMIN_PASSWORD='ganti-dengan-kata-sandi-kuat' python3 server.py
+python3 server.py
 ```
 
 Buka `http://localhost:8000`. Halaman masuk staf ada di `/admin/login`; setelah masuk, dashboard terbuka di `/admin/orders`. Data tersimpan di `data/algokopi.sqlite3` (ubah dengan `ALGOKOPI_DB`). Untuk uji, jalankan `python3 -m unittest discover -s tests -v`.
 Server hanya mendengarkan di `127.0.0.1` secara default; atur `HOST` dan `PORT` bila perlu.
+
+Pada mode demo tanpa akun admin dari environment, masuk dengan `admin` / `demoadmin`. Kredensial ini bersifat publik untuk demo. Jika `ALGOKOPI_ADMIN_USER` dan `ALGOKOPI_ADMIN_PASSWORD` diatur, aplikasi memakai akun tersebut. Mode transaksi nyata mengharuskan akun admin dikonfigurasi melalui environment.
 
 ## Struktur kode
 
