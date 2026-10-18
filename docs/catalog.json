@@ -1,0 +1,267 @@
+[
+  {
+    "id": 1,
+    "category": "Minuman",
+    "name": "Americano",
+    "slug": "americano",
+    "description": "Espresso dengan air, sederhana dan kaya rasa.",
+    "price": 28000,
+    "available": 1,
+    "archived": 0,
+    "sort_order": 0,
+    "options": [
+      {
+        "name": "Suhu",
+        "required": true,
+        "choices": [
+          {
+            "id": "hot",
+            "label": "Panas",
+            "delta": 0
+          },
+          {
+            "id": "iced",
+            "label": "Dingin",
+            "delta": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "category": "Minuman",
+    "name": "Espresso",
+    "slug": "espresso",
+    "description": "Satu takaran kopi pekat dengan karakter yang dalam.",
+    "price": 24000,
+    "available": 1,
+    "archived": 0,
+    "sort_order": 1,
+    "options": []
+  },
+  {
+    "id": 3,
+    "category": "Minuman",
+    "name": "Cold Brew",
+    "slug": "cold-brew",
+    "description": "Kopi seduh dingin yang halus dan menyegarkan.",
+    "price": 32000,
+    "available": 1,
+    "archived": 0,
+    "sort_order": 2,
+    "options": []
+  },
+  {
+    "id": 4,
+    "category": "Minuman",
+    "name": "Cappuccino",
+    "slug": "cappuccino",
+    "description": "Espresso, susu hangat, dan busa yang lembut.",
+    "price": 34000,
+    "available": 1,
+    "archived": 0,
+    "sort_order": 3,
+    "options": [
+      {
+        "name": "Suhu",
+        "required": true,
+        "choices": [
+          {
+            "id": "hot",
+            "label": "Panas",
+            "delta": 0
+          },
+          {
+            "id": "iced",
+            "label": "Dingin",
+            "delta": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "category": "Minuman",
+    "name": "Macchiato",
+    "slug": "macchiato",
+    "description": "Espresso dengan sentuhan busa susu.",
+    "price": 33000,
+    "available": 1,
+    "archived": 0,
+    "sort_order": 4,
+    "options": [
+      {
+        "name": "Suhu",
+        "required": true,
+        "choices": [
+          {
+            "id": "hot",
+            "label": "Panas",
+            "delta": 0
+          },
+          {
+            "id": "iced",
+            "label": "Dingin",
+            "delta": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "category": "Minuman",
+    "name": "Flat White",
+    "slug": "flat-white",
+    "description": "Espresso dan susu dengan tekstur lembut.",
+    "price": 35000,
+    "available": 1,
+    "archived": 0,
+    "sort_order": 5,
+    "options": [
+      {
+        "name": "Suhu",
+        "required": true,
+        "choices": [
+          {
+            "id": "hot",
+            "label": "Panas",
+            "delta": 0
+          },
+          {
+            "id": "iced",
+            "label": "Dingin",
+            "delta": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "category": "Minuman",
+    "name": "Matcha",
+    "slug": "matcha",
+    "description": "Teh hijau lembut dengan susu.",
+    "price": 36000,
+    "available": 1,
+    "archived": 0,
+    "sort_order": 6,
+    "options": [
+      {
+        "name": "Suhu",
+        "required": true,
+        "choices": [
+          {
+            "id": "hot",
+            "label": "Panas",
+            "delta": 0
+          },
+          {
+            "id": "iced",
+            "label": "Dingin",
+            "delta": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "category": "Makanan",
+    "name": "Nasi Goreng",
+    "slug": "nasi-goreng",
+    "description": "Nasi goreng hangat untuk menemani waktu santai.",
+    "price": 42000,
+    "available": 1,
+    "archived": 0,
+    "sort_order": 7,
+    "options": []
+  },
+  {
+    "id": 9,
+    "category": "Makanan",
+    "name": "Beef Bowl",
+    "slug": "beef-bowl",
+    "description": "Semangkuk nasi dengan daging sapi berbumbu.",
+    "price": 48000,
+    "available": 1,
+    "archived": 0,
+    "sort_order": 8,
+    "options": []
+  },
+  {
+    "id": 10,
+    "category": "Makanan",
+    "name": "Pasta",
+    "slug": "pasta",
+    "description": "Pasta hangat dengan saus gurih.",
+    "price": 44000,
+    "available": 1,
+    "archived": 0,
+    "sort_order": 9,
+    "options": []
+  },
+  {
+    "id": 11,
+    "category": "Dessert",
+    "name": "Brownies",
+    "slug": "brownies",
+    "description": "Cokelat padat dan lembut di setiap gigitan.",
+    "price": 29000,
+    "available": 1,
+    "archived": 0,
+    "sort_order": 10,
+    "options": []
+  },
+  {
+    "id": 12,
+    "category": "Dessert",
+    "name": "Cake",
+    "slug": "cake",
+    "description": "Sepotong kue lembut untuk teman kopi.",
+    "price": 32000,
+    "available": 1,
+    "archived": 0,
+    "sort_order": 11,
+    "options": []
+  },
+  {
+    "id": 13,
+    "category": "Dessert",
+    "name": "Waffle",
+    "slug": "waffle",
+    "description": "Waffle hangat dengan bagian luar yang renyah.",
+    "price": 36000,
+    "available": 1,
+    "archived": 0,
+    "sort_order": 12,
+    "options": []
+  },
+  {
+    "id": 14,
+    "category": "Dessert",
+    "name": "French Fries",
+    "slug": "french-fries",
+    "description": "Kentang goreng renyah untuk dinikmati bersama.",
+    "price": 26000,
+    "available": 1,
+    "archived": 0,
+    "sort_order": 13,
+    "options": []
+  },
+  {
+    "id": 15,
+    "category": "Dessert",
+    "name": "Croissant",
+    "slug": "croissant",
+    "description": "Pastry berlapis dengan rasa mentega yang ringan.",
+    "price": 28000,
+    "available": 1,
+    "archived": 0,
+    "sort_order": 14,
+    "options": []
+  }
+]

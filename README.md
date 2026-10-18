@@ -23,6 +23,20 @@ Pada mode demo tanpa akun admin dari environment, masuk dengan `admin` / `demoad
 
 Frontend memakai ES modules langsung di browser, sehingga tidak memerlukan proses build. Untuk mengubah tampilan, cari bagian halaman di `views.js`, lalu aturan terkait di `styles.css`. Jika menambah modul JavaScript baru, daftarkan rutenya di daftar `assets` dalam `server.py`.
 
+## Pratinjau GitHub Pages
+
+Folder `docs/` berisi pratinjau statis untuk GitHub Pages. Beranda, katalog, detail produk, dan tampilan dashboard dapat dibuka tanpa server Python. Login dashboard pratinjau memakai `admin` / `demoadmin`. Semua menu, pesanan, dan angka dashboard adalah contoh; tombol pemesanan dan perubahan data tidak aktif.
+
+Setelah mengubah tampilan atau katalog, bangun ulang `docs/`:
+
+```bash
+python3 scripts/build_preview.py
+```
+
+Sumber pratinjau ada di `preview/`; skrip membangun katalog dari data awal di `server.py` dan menyalin aset frontend ke `docs/`. Commit perubahan sumber **dan** hasil `docs/`. Di GitHub, buka **Settings → Pages**, pilih **Deploy from a branch**, lalu pilih branch `main` dan folder `/docs`. Setelah push dan proses Pages selesai, pratinjau tersedia di `https://maidenlikes.github.io/coffe-shop/`.
+
+GitHub Pages hanya menyajikan berkas statis. Untuk pesanan, pembayaran, dan dashboard yang menyimpan perubahan, jalankan `server.py` di hosting Python dengan penyimpanan database persisten.
+
 Akun staf dengan akses antrean dan pembayaran kasir dapat ditambahkan melalui `ALGOKOPI_STAFF_USER` dan `ALGOKOPI_STAFF_PASSWORD`. Admin memakai variabel pada contoh di atas.
 
 ## Sebelum digunakan untuk transaksi nyata
